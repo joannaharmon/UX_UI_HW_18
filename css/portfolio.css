@@ -1,0 +1,117 @@
+
+.topnav {
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    text-transform:uppercase;
+  }
+
+.logo {
+  display: inline-block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    padding: 8px 10px;
+    background-color:none;
+    color:black;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  a:hover {
+    color: #45B2AB;
+    font-weight: bold;
+  }
+
+  .triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid #555;
+}
+
+.triangle-down:hover {
+  width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid #45B2AB;
+}
+
+.flex-container {
+  display: flex;
+  background-color:white;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  background-color:white;
+  margin: 10px;
+  padding: 20px;
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 22px;
+  font-weight: normal;  
+}
+.column1 {
+  flex: 1 1 550px;
+}
+
+.column2 {
+  flex: 0 2 200px;
+}
+
+h1 {
+  font-family: 'Roboto Mono';
+  font-size: 52px;
+  text-decoration: none;
+  font-weight: normal;
+  margin-bottom: -30px;
+}
+
+h2 {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 28px;
+}
+
+h3 {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 30px;
+  margin-bottom: -20px;
+  color: #393939;
+}
+
+p {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 22px;
+}
+
+#paragraphWhy {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+h4 {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: -20px;
+}
+
