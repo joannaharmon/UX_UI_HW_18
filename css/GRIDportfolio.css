@@ -1,4 +1,8 @@
 
+* {
+  box-sizing: border-box;
+}
+
 .topnav {
     font-family: 'Roboto Mono';
     font-size: 20px;
@@ -15,7 +19,6 @@
 
 ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
     overflow: hidden;
   }
@@ -61,28 +64,12 @@ ul {
   flex-wrap: wrap;
 }
 
-.flex-container > div {
-  background-color:white;
-  margin: 10px;
-  padding: 20px;
-  font-family: 'Red Hat Text', sans-serif;
-  font-size: 22px;
-  font-weight: normal;  
-}
-.column1 {
-  flex: 1 1 550px;
-}
-
-.column2 {
-  flex: 0 2 200px;
-}
-
 h1 {
   font-family: 'Roboto Mono';
   font-size: 52px;
   text-decoration: none;
   font-weight: normal;
-  margin-bottom: -30px;
+  padding-bottom: -30px;
 }
 
 h2 {
@@ -93,7 +80,7 @@ h2 {
 h3 {
   font-family: 'Red Hat Text', sans-serif;
   font-size: 30px;
-  margin-bottom: -20px;
+  padding-bottom: -20px;
   color: #393939;
 }
 
@@ -112,7 +99,7 @@ h4 {
   font-family: 'Red Hat Text', sans-serif;
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: -20px;
+  padding-bottom: -20px;
 }
 
 h5 {
@@ -120,7 +107,7 @@ h5 {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: -20px;
+  padding-bottom: -20px;
 }
 
 h6 {
@@ -128,33 +115,7 @@ h6 {
   font-size: 40px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: -20px;
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1199px;
-  padding-top: 50px;
-  margin-right: 50px;
-}
-
-.skill {
-  margin: 0px;
-  padding: 20px;
-  max-width: 400px;
-}
-
-.skill-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.triangle-header {
-  float: left;
-  width: 225px;
+  padding-bottom: -20px;
 }
 
 #bioText {
@@ -174,8 +135,6 @@ h6 {
   font-family: 'Roboto Mono';
   font-size: 22px;
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 30px;
 }
 
 #copyright {
@@ -183,56 +142,41 @@ h6 {
   font-size: 12px;
 }
 
-@media only screen and (max-width: 600px){
-  .triangle-header {
-    width: 150px;
-    margin-bottom: -100px;
-    float: none;
-  }
-  .skill {
-   z-index: -1;
-   margin: 0px;
-   padding: 0px;
-   max-width: 400px;
-  }
 
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 0px;
-    padding: 10px;
-  }
-}
-
-.portfolio-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  max-width: 1199px;
-  padding-top: 50px;
-  margin-right: 50px;
-}
-
-.portfolio {
-  margin: 0px;
+.portfolioItem {
   padding: 20px;
-  max-width: 400px;
+  max-width: 300px;
 }
 
 .portfolio-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 400px;
+  max-width:100%;
+  height: auto;
 }
 
-.portfolio-header {
-  margin: 0px;
-  padding: 20px;
-  justify-content: center;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
+
+.item1 { grid-area: title; }
+.item2 { grid-area: ignite; }
+.item3 { grid-area: sandicroft; }
+.item4 { grid-area: liveactionset; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 35% 35% auto;
+  grid-template-areas:
+    'title title title title'
+    '. ignite sandicroft .'
+    '. liveactionset . .';
+  grid-gap: 40px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  padding: 0 0;
+}
+
 
